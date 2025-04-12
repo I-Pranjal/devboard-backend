@@ -28,6 +28,11 @@ app.use('/api/projects', projectRoutes)
 const userRoutes = require('./Routes/userRoutes')
 app.use('/api/user', userRoutes); 
 
+// Server check
+app.get('/', (req, res) => {
+  res.send('DevBoard API is running')
+})
+
 
 
 const PORT = process.env.PORT || 5000
