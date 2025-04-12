@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const GoogleGenAI = require('@google/genai/GoogleGenAI'); 
+const GoogleGenAI = require('@google/genai').GoogleGenAI;
 
 
 const geminiAPI = process.env.VITE_GEMINI_API ;
