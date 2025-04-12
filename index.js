@@ -33,6 +33,9 @@ app.get('/', (req, res) => {
   res.send('DevBoard API is running')
 })
 
+// Chatting route 
+const chatRoutes = require('./Routes/chatRoutes')
+app.use('/api/chat', chatRoutes)
 
 
 const PORT = process.env.PORT || 5000
