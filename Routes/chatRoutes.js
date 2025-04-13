@@ -6,7 +6,7 @@ const GoogleGenAI = require('@google/genai').GoogleGenAI;
 const geminiAPI = process.env.VITE_GEMINI_API ;
 const ai = new GoogleGenAI({ apiKey: geminiAPI });
 
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
     const userMessage = req.body.message;
     try {
         const response = await ai.models.generateContent({
