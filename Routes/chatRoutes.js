@@ -11,9 +11,9 @@ router.post('/', async (req, res) => {
     try {
         const response = await ai.models.generateContent({
           model: "gemini-2.0-flash",
-          contents: [userMessage],
+          contents: userMessage,
         });
-        const botmessage = { role: "assistant", content: response.text };
+        const botmessage = response.text ;
         res.json(botmessage);
     } catch (err) {
         console.error("Gemini error:", err);
